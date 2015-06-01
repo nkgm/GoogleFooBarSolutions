@@ -56,6 +56,5 @@ def answer(minions):
 	ratio_list = [(0.0 + minion[0])/((0.0 + minion[1])/minion[2])  for minion in minions]
 	sorted_list = sorted(zip([i for i in enumerate(ratio_list)], ratio_list), key=itemgetter(1))
 
-	final_list = [minion[0][0] for minion in sorted_list]
+	return [minion[0][0] for minion in sorted_list]
 	
-	return final_list
